@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 520" role="img" aria-labelledby="map-title map-desc">
+  <title id="map-title">Berkshire County coverage map</title>
+  <desc id="map-desc">Illustrative north-up map showing current coverage in Pittsfield and Lenox, with planned expansion to Stockbridge and Great Barrington. Town markers are approximate.</desc>
+  <rect width="640" height="520" rx="4" fill="#fffefa"/>
+  <text x="34" y="42" fill="#718077" font-family="Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="2">BERKSHIRE COUNTY</text>
+  <text x="34" y="62" fill="#929c95" font-family="Arial, sans-serif" font-size="10" letter-spacing="1">NORTH ↑</text>
+  <path d="M222 33 267 48 291 73 326 78 344 103 378 112 383 145 409 165 399 197 421 218 403 249 419 278 398 306 406 336 386 365 390 399 368 429 365 458 334 484 303 472 277 488 247 466 217 475 194 450 165 443 155 412 133 392 145 360 126 337 145 305 130 281 151 253 135 223 157 193 147 165 172 139 164 108 187 83 184 54 Z" fill="#eaf0e8" stroke="#aebdaf" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M234 54 C270 111 263 152 290 194 S307 272 321 303 S328 371 349 421" fill="none" stroke="#fffefa" stroke-width="7" stroke-linecap="round"/>
+  <path d="M214 153 C266 170 328 163 389 189 M167 300 C237 281 319 286 407 315 M165 409 C223 381 298 382 383 402" fill="none" stroke="#fffefa" stroke-width="5" stroke-linecap="round"/>
+  <path d="M234 54 C270 111 263 152 290 194 S307 272 321 303 S328 371 349 421" fill="none" stroke="#c7d0c4" stroke-width="1.5" stroke-dasharray="5 6"/>
+  <g font-family="Arial, sans-serif">
+    <circle cx="343" cy="148" r="11" fill="#294b40" stroke="#fffefa" stroke-width="4"/>
+    <text x="365" y="145" fill="#294b40" font-size="17" font-weight="700">Pittsfield</text>
+    <text x="365" y="162" fill="#65756b" font-size="9" font-weight="700" letter-spacing="1.2">CURRENT</text>
+
+    <circle cx="322" cy="232" r="11" fill="#294b40" stroke="#fffefa" stroke-width="4"/>
+    <text x="344" y="229" fill="#294b40" font-size="17" font-weight="700">Lenox</text>
+    <text x="344" y="246" fill="#65756b" font-size="9" font-weight="700" letter-spacing="1.2">CURRENT</text>
+
+    <circle cx="288" cy="320" r="10" fill="#c8d6c6" stroke="#fffefa" stroke-width="4"/>
+    <text x="309" y="317" fill="#66776c" font-size="16" font-weight="600">Stockbridge</text>
+    <text x="309" y="334" fill="#929c95" font-size="9" font-weight="700" letter-spacing="1.2">PLANNED</text>
+
+    <circle cx="270" cy="414" r="10" fill="#c8d6c6" stroke="#fffefa" stroke-width="4"/>
+    <text x="291" y="411" fill="#66776c" font-size="16" font-weight="600">Great Barrington</text>
+    <text x="291" y="428" fill="#929c95" font-size="9" font-weight="700" letter-spacing="1.2">PLANNED</text>
+  </g>
+  <text x="34" y="494" fill="#929c95" font-family="Arial, sans-serif" font-size="10">Illustrative map · town locations are approximate</text>
+</svg>

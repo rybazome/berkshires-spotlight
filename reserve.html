@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Choose an ad size and enter your business contact details to reserve space in The Berkshires Spotlight.">
+    <meta name="theme-color" content="#f8f6f1">
+    <link rel="canonical" href="https://theberkshiresspotlight.com/reserve.html">
+    <title>Reserve Ad Space | The Berkshires Spotlight</title>
+    <link rel="stylesheet" href="styles.css?v=3">
+  </head>
+  <body class="reservation-page">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="The Berkshires Spotlight home"><span class="brand-logo-window"><img src="images/berkshires-spotlight-logo.png" alt="" width="640" height="640"></span></a>
+      <a class="header-cta" href="index.html#advertising">View ad options <span aria-hidden="true">↗</span></a>
+    </header>
+    <main class="reservation-main">
+      <a class="reservation-back" href="index.html">← Back to the Spotlight</a>
+      <div class="reservation-heading"><p class="eyebrow">Your next step</p><h1>Reserve your space</h1><p>Choose an ad size, then tell us how to reach you. Each placement is for one monthly mailing.</p></div>
+
+      <form class="reservation-card" id="reservation-form">
+        <div class="reservation-progress" aria-label="Step 1 of 2"><span class="progress-step is-current" data-progress="1"><b>1</b> Ad size</span><span class="progress-rule"></span><span class="progress-step" data-progress="2"><b>2</b> Your details</span></div>
+
+        <section class="reservation-step" data-step="1" aria-labelledby="size-title">
+          <p class="eyebrow">Step 1 of 2</p><h2 id="size-title">Choose an ad size</h2><p class="step-description">Both options include placement in one shared postcard mailing to approximately 5,000 households.</p>
+          <div class="reservation-options">
+            <label class="reservation-option"><input type="radio" name="ad-size" value="4 × 3 ad — $500 per month" required><span class="option-check" aria-hidden="true"></span><span class="option-main"><strong>4 × 3</strong><span>AD SPACE</span></span><span class="option-price">$500 <small>/ month</small></span></label>
+            <label class="reservation-option"><input type="radio" name="ad-size" value="4 × 6 ad — $900 per month" required><span class="option-check" aria-hidden="true"></span><span class="option-main"><strong>4 × 6</strong><span>AD SPACE · LARGER PLACEMENT</span></span><span class="option-price">$900 <small>/ month</small></span></label>
+          </div>
+          <button class="button button-primary reservation-next" type="button" id="to-details">Continue <span aria-hidden="true">→</span></button>
+        </section>
+
+        <section class="reservation-step" data-step="2" aria-labelledby="details-title" hidden>
+          <p class="eyebrow">Step 2 of 2</p><h2 id="details-title">Your business details</h2><p class="step-description">We’ll use these details to follow up about your selected ad space.</p>
+          <div class="selected-size" id="selected-size"></div>
+          <div class="reservation-fields">
+            <label for="business-name">Business name</label><input id="business-name" name="business-name" autocomplete="organization" required>
+            <label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel" required>
+            <label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <p class="reservation-note">Checkout will be added here. This form does not send or store your information yet.</p>
+          <div class="reservation-actions"><button class="button button-secondary" type="button" id="back-to-size">← Back</button><button class="button button-primary" type="submit">Continue to checkout <span aria-hidden="true">→</span></button></div>
+          <p class="reservation-message" id="reservation-message" role="status" hidden></p>
+        </section>
+      </form>
+      <p class="reservation-help">Questions? Call or text <a href="tel:+14133471525">Ryan at 413-347-1525</a>.</p>
+    </main>
+    <footer class="site-footer"><div class="section-wrap footer-inner"><a class="footer-brand" href="index.html">The Berkshires <strong>Spotlight</strong></a><span>Local businesses. Shared mail. Berkshire roots.</span><a href="https://www.instagram.com/theberkshiresspotlight?stkn=MWh2Z3ZybXNrZTRraQ%3D%3D" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a><span class="copyright">© <span id="year">2026</span> The Berkshires Spotlight</span></div></footer>
+    <script>
+      const form = document.getElementById('reservation-form');
+      const sizeStep = form.querySelector('[data-step="1"]');
+      const detailsStep = form.querySelector('[data-step="2"]');
+      const selectedSize = document.getElementById('selected-size');
+      const message = document.getElementById('reservation-message');
+      document.getElementById('year').textContent = new Date().getFullYear();
+      document.getElementById('to-details').addEventListener('click', () => {
+        const choice = form.querySelector('input[name="ad-size"]:checked');
+        if (!choice) { form.querySelector('input[name="ad-size"]').reportValidity(); return; }
+        selectedSize.textContent = `Selected placement: ${choice.value}`;
+        sizeStep.hidden = true;
+        detailsStep.hidden = false;
+        document.querySelector('[aria-label="Step 1 of 2"]').setAttribute('aria-label', 'Step 2 of 2');
+        document.querySelector('[data-progress="1"]').classList.remove('is-current');
+        document.querySelector('[data-progress="2"]').classList.add('is-current');
+        document.getElementById('business-name').focus();
+      });
+      document.getElementById('back-to-size').addEventListener('click', () => {
+        detailsStep.hidden = true;
+        sizeStep.hidden = false;
+        document.querySelector('[aria-label="Step 2 of 2"]').setAttribute('aria-label', 'Step 1 of 2');
+        document.querySelector('[data-progress="2"]').classList.remove('is-current');
+        document.querySelector('[data-progress="1"]').classList.add('is-current');
+        document.getElementById('to-details').focus();
+      });
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        message.hidden = false;
+        message.textContent = 'Checkout is not connected yet. Your information has not been sent or saved.';
+      });
+    </script>
+  </body>
+</html>
