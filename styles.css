@@ -25,3 +25,12 @@ html{scroll-padding-top:0}
 .how-it-works-section,.pricing-section{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center}.about-main{display:flex;align-items:center;min-height:calc(100vh - 139px);min-height:calc(100svh - 139px)}.about-story{gap:48px;padding-top:30px;padding-bottom:30px}.about-photo{width:min(100%,430px);justify-self:center}
 @media(max-width:700px){.how-it-works-section,.pricing-section{min-height:0;display:block;padding-top:65px;padding-bottom:70px}.about-main{display:block;min-height:0}.about-story{gap:34px;padding-top:43px;padding-bottom:56px}}
 .step-reserve-photo-link{display:block;width:min(100%,280px);margin:0 0 14px;box-shadow:0 5px 14px rgba(32,60,52,.16)}.step-reserve-photo-link:focus-visible{outline:2px solid var(--gold);outline-offset:3px}.step-reserve-photo{display:block;width:100%;height:auto;aspect-ratio:630 / 513;object-fit:cover;object-position:center top}.step-reserve h3{width:min(100%,280px);margin:0 0 14px;text-align:center}
+
+/* Completed mailing: show both sides with unobstructed artwork. */
+.sample-section{grid-template-columns:1fr;gap:28px}
+.sample-copy>p:not(.eyebrow){max-width:620px}
+.postcard-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.postcard-gallery .sample-frame{margin:0}
+.postcard-gallery a{display:block}
+.postcard-gallery a:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+@media(max-width:700px){.postcard-gallery{grid-template-columns:1fr}}

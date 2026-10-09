@@ -11,9 +11,9 @@ A small static website made with plain HTML and CSS. It has no build step, runti
 
 You can also open `index.html` directly, but using the local server is closer to how the deployed site will be served.
 
-## Add the sample postcard
+## Postcard images
 
-The sample postcard image is stored at `images/sample-postcard.png` and displayed in the sample section. Replace that file with an updated Berkshire mailing image when the first one is produced. Other image files can go in the same folder; they need to be added to `index.html` before they appear on the site.
+Both sides of the October 2026 Lenox postcard are stored at `images/lenox-october-2026-front.png` and `images/lenox-october-2026-back.png`. They appear in the postcard section, with links to the full-size images. Update the image paths and mailing description in `index.html` when a new postcard is ready.
 
 The official Facebook page could not be accessed for image selection, so no Facebook images are included. The site links to the official page.
 
@@ -35,6 +35,6 @@ Cloudflare may update dashboard labels over time. See the [Cloudflare Pages stat
 
 - `index.html` contains the page content and semantic structure.
 - `styles.css` contains colors, layout, responsive rules, and typography.
-- `images/` contains the logo, featured photo, and sample postcard.
+- `images/` contains the logo, featured photo, and postcard images.
 
 Edit the HTML to update wording, phone numbers, prices, and coverage. Edit the CSS variables at the top of `styles.css` to adjust the colors.
